@@ -2,14 +2,37 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="src\app\fetchdata.component.ts" />
+    <None Remove="src\app\Services\CustomerData.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.2.0" />
+    <PackageReference Include="Microsoft.AspNet.Razor" Version="3.2.7" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9" />
+	<PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+	<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor" Version="2.2.0" />
+	<PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
+	<PackageReference Include="Microsoft.NET.Sdk.Razor" Version="2.2.0" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.110" />
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.110" />
+    <PackageReference Include="System.Data.SQLite.EF6" Version="1.0.110" />
+    <PackageReference Include="System.Data.SQLite.EF6.Migrations" Version="1.0.106" />
+    <PackageReference Include="System.Data.SQLite.Linq" Version="1.0.110" />
   </ItemGroup>
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.4" />
+	 <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="src\app\fetchdata.component.ts" />
+    <TypeScriptCompile Include="src\app\Services\CustomerData.ts" />
   </ItemGroup>
 
 </Project>

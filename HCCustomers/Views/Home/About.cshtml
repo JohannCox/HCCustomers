@@ -3,5 +3,23 @@
 }
 <h2>@ViewData["Title"]</h2>
 <h3>@ViewData["Message"]</h3>
+<h4>@ViewData["Image"]</h4>
 
+<img id="img" src="data:image/jpg;base64," + base64String />
+<img src="@Url.Action("getImg", "Customer")" alt="Person Image" />
 <p>Use this area to provide additional information.</p>
+
+
+<form method="post">
+    <input id="lastname" name="lastname" type="text" >Name<input />
+    <input id="firstname" type="text" />
+    <input id="dob" type="date" />
+
+    <input id="address" type="text" />
+    <input id="city" type="text" />
+    <input id="state" type="text" />
+    <input id="zip" type="text" />
+
+    <input id="interests" type="text" />
+    <input id="imagefile" type="image" />
+</form>
